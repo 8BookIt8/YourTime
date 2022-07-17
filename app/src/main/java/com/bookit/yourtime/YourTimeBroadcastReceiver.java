@@ -18,10 +18,8 @@ public class YourTimeBroadcastReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         if (action.equals(Intent.ACTION_SCREEN_ON)) {
             YourTimeService.screenOn();
-            Toast.makeText(context, "SCREEN ON!", Toast.LENGTH_SHORT).show();
         } else if (action.equals(Intent.ACTION_SCREEN_OFF)) {
             YourTimeService.screenOff();
-            Toast.makeText(context, "SCREEN OFF!", Toast.LENGTH_SHORT).show();
         }
     }
 }
