@@ -1,3 +1,9 @@
+/*
+ * Created by 8bookit8 on 22. 7. 17. 오후 11:21
+ * Copyright (c) 2022. All rights reserved.
+ * Last modified 22. 7. 17. 오후 11:18
+ */
+
 package com.bookit.yourtime;
 
 import android.app.Notification;
@@ -88,10 +94,9 @@ public class YourTimeService extends Service {
                 PendingIntent fullScreenPendingIntent = PendingIntent.getActivity(yourTimeService, 0, fullScreenIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
 
                 String channelId = "channel_2";
-                NotificationChannel channel = null;
                 NotificationManager notificationManager = ((NotificationManager) getSystemService(NOTIFICATION_SERVICE));
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    channel = new NotificationChannel(channelId, "YourTime", NotificationManager.IMPORTANCE_HIGH);
+                    NotificationChannel channel = new NotificationChannel(channelId, "YourTime", NotificationManager.IMPORTANCE_HIGH);
                     notificationManager.createNotificationChannel(channel);
                 }
 

@@ -1,3 +1,9 @@
+/*
+ * Created by 8bookit8 on 22. 7. 17. 오후 11:21
+ * Copyright (c) 2022. All rights reserved.
+ * Last modified 22. 7. 17. 오후 11:18
+ */
+
 package com.bookit.yourtime;
 
 import androidx.appcompat.app.AlertDialog;
@@ -91,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isOpeningMenu) {
-                    isOnTimeWarning = isOnTimeWarning ? false : true;
+                    isOnTimeWarning = !isOnTimeWarning;
                     YourTimeService.isOnTimeWarning = isOnTimeWarning;
                     tvTimeWarning.setTextColor(Color.parseColor(isOnTimeWarning ? "#0276f9" : "#b4b4b4"));
                 }
@@ -102,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isOpeningMenu) {
-                    isOnEyeAlram = isOnEyeAlram ? false : true;
+                    isOnEyeAlram = !isOnEyeAlram;
                     YourTimeService.isOnEyeAlram = isOnEyeAlram;
                     tvEyeAlarm.setTextColor(Color.parseColor(isOnEyeAlram ? "#0276f9" : "#b4b4b4"));
                 }
