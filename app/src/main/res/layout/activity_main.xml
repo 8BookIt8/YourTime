@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_menu_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/menu_background"/>
+
+        <TextView
+            android:id="@+id/tv_time_warning"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:text="사용시간 경고"
+            android:textSize="28dp"
+            android:textColor="#0276f9"
+            android:fontFamily="@font/apple"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="120dp"
+            android:background="@drawable/white_round_box"
+            tools:ignore="MissingConstraints"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_eye_alarm"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:text="눈 깜빡임 알람"
+            android:textSize="28dp"
+            android:textColor="#0276f9"
+            android:fontFamily="@font/apple"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/white_round_box"
+            tools:ignore="MissingConstraints"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_timer_hour"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:text="00"
+                        android:textSize="80dp"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/helvetica"
+                        android:background="@drawable/gray_round_box"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_timer_min"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:text="00"
+                        android:textSize="80dp"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/helvetica"
+                        android:background="@drawable/gray_round_box"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="현재 휴대폰 사용시간"
+                    android:textSize="28dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/apple"
+                    android:gravity="right"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbtn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            app:backgroundTint="#0276f9"
+            android:src="@drawable/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_information"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/information"
+        android:layout_margin="10dp"/>
+</FrameLayout>
